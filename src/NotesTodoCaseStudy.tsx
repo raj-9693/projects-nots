@@ -1,4 +1,5 @@
 ﻿import { useState } from "react";
+import DeveloperDocs from "./DeveloperDocs";
 import {
   ArrowRight,
   ArrowUpRight,
@@ -45,6 +46,7 @@ export default function NotesTodoCaseStudy() {
             <a href="#features">Features</a>
             <a href="#stack">Tech Stack</a>
             <a href="#demo">Demo</a>
+            <a href="#developer-docs">Docs</a>
             <a href="#contact">Contact</a>
           </nav>
           <div className="header-actions">
@@ -436,6 +438,7 @@ export default function NotesTodoCaseStudy() {
             <b>Learn · build · verify</b>
           </div>
         </section>
+        <DeveloperDocs />
         <section className="container contact-section" id="contact">
           <div className="contact-card">
             <div className="contact-row">
