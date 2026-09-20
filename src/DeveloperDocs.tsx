@@ -1087,6 +1087,81 @@ OF THIS SOFTWARE.`}</CodeBlock>
       </div>{/* end container */}
 
       <style>{`
+        .developer-docs-section {
+          color: #f5f5f7;
+        }
+
+        .notes-app.theme-light .developer-docs-section {
+          background: linear-gradient(180deg, #f7f8ff 0%, #eef1fb 100%) !important;
+          color: #1f2937;
+          border-top-color: rgba(79, 70, 229, .16) !important;
+        }
+
+        .notes-app.theme-light .developer-docs-section h2,
+        .notes-app.theme-light .developer-docs-section h3 {
+          color: #172033 !important;
+        }
+
+        .notes-app.theme-light .developer-docs-section p,
+        .notes-app.theme-light .developer-docs-section ul,
+        .notes-app.theme-light .developer-docs-section li,
+        .notes-app.theme-light .developer-docs-section td {
+          color: #526078 !important;
+        }
+
+        .notes-app.theme-light .developer-docs-section strong {
+          color: #27344d !important;
+        }
+
+        .notes-app.theme-light .developer-docs-section aside {
+          border-color: rgba(79, 70, 229, .2) !important;
+          background: rgba(255, 255, 255, .72) !important;
+          box-shadow: 0 18px 42px rgba(50, 60, 100, .08);
+        }
+
+        .notes-app.theme-light .developer-docs-section aside > div {
+          border-color: rgba(79, 70, 229, .18) !important;
+          background: rgba(238, 241, 251, .82) !important;
+        }
+
+        .notes-app.theme-light .developer-docs-section input {
+          color: #34415a !important;
+        }
+
+        .notes-app.theme-light .developer-docs-section button {
+          color: #526078 !important;
+        }
+
+        .notes-app.theme-light .developer-docs-section button[aria-current="location"] {
+          color: #4338ca !important;
+          background: rgba(99, 102, 241, .13) !important;
+        }
+
+        .notes-app.theme-light .developer-docs-section .docs-section-card {
+          border-color: rgba(79, 70, 229, .16) !important;
+          background: rgba(255, 255, 255, .78) !important;
+          box-shadow: 0 12px 30px rgba(50, 60, 100, .06);
+        }
+
+        .notes-app.theme-light .developer-docs-section .docs-table-wrap {
+          border-color: rgba(79, 70, 229, .16) !important;
+          background: rgba(255, 255, 255, .7);
+        }
+
+        .notes-app.theme-light .developer-docs-section table tr {
+          border-bottom-color: rgba(79, 70, 229, .12) !important;
+        }
+
+        .notes-app.theme-light .developer-docs-section table tr:first-child {
+          background: rgba(99, 102, 241, .1) !important;
+        }
+
+        .notes-app.theme-light .developer-docs-section pre {
+          background: #182033 !important;
+          color: #c7d2fe !important;
+          border-color: rgba(79, 70, 229, .24) !important;
+        }
+
         .docs-layout > aside {
           min-width: 0;
         }
