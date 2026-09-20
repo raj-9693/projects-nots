@@ -76,7 +76,7 @@ function DocTag({ label }: { label: string }) {
 
 function SectionCard({ children }: { children: React.ReactNode }) {
   return (
-    <div style={{
+    <div className="docs-section-card" style={{
       border: "1px solid rgba(99,102,241,.18)", borderRadius: 18,
       background: "rgba(255,255,255,.03)", padding: "28px 30px", marginBottom: 16,
     }}>
@@ -622,7 +622,7 @@ EMAIL_USER=yourapp@gmail.com
 EMAIL_APP_PASSWORD=<your_gmail_app_password>`}</CodeBlock>
 
                 <SubHeading>Variable reference</SubHeading>
-                <div style={{ marginTop: 12, border: "1px solid rgba(99,102,241,.18)", borderRadius: 12, overflow: "hidden" }}>
+                <div className="docs-table-wrap" style={{ marginTop: 12, border: "1px solid rgba(99,102,241,.18)", borderRadius: 12, overflow: "hidden" }}>
                   <table style={{ width: "100%", borderCollapse: "collapse", fontSize: ".78rem" }}>
                     <thead>
                       <tr style={{ background: "rgba(99,102,241,.1)", borderBottom: "1px solid rgba(99,102,241,.18)" }}>
@@ -752,7 +752,7 @@ EMAIL_APP_PASSWORD=<your_gmail_app_password>`}</CodeBlock>
                 </Prose>
 
                 {/* Route summary table */}
-                <div style={{ marginTop: 18, border: "1px solid rgba(99,102,241,.18)", borderRadius: 12, overflow: "hidden" }}>
+                <div className="docs-table-wrap" style={{ marginTop: 18, border: "1px solid rgba(99,102,241,.18)", borderRadius: 12, overflow: "hidden" }}>
                   <table style={{ width: "100%", borderCollapse: "collapse", fontSize: ".78rem" }}>
                     <thead>
                       <tr style={{ background: "rgba(99,102,241,.1)", borderBottom: "1px solid rgba(99,102,241,.18)" }}>
@@ -857,7 +857,7 @@ EMAIL_APP_PASSWORD=<your_gmail_app_password>`}</CodeBlock>
 
                 <SubHeading>Common error shape</SubHeading>
                 <CodeBlock lang="json">{`{ "success": false, "message": "Human-readable error description" }`}</CodeBlock>
-                <div style={{ marginTop: 14, border: "1px solid rgba(99,102,241,.18)", borderRadius: 12, overflow: "hidden" }}>
+                <div className="docs-table-wrap" style={{ marginTop: 14, border: "1px solid rgba(99,102,241,.18)", borderRadius: 12, overflow: "hidden" }}>
                   <table style={{ width: "100%", borderCollapse: "collapse", fontSize: ".78rem" }}>
                     <thead>
                       <tr style={{ background: "rgba(99,102,241,.1)", borderBottom: "1px solid rgba(99,102,241,.18)" }}>
@@ -1099,6 +1099,7 @@ OF THIS SOFTWARE.`}</CodeBlock>
         @media (max-width: 767px) {
           .developer-docs-section {
             overflow-x: hidden;
+            padding: 64px 0 72px !important;
           }
 
           .developer-docs-section > .container {
@@ -1120,6 +1121,21 @@ OF THIS SOFTWARE.`}</CodeBlock>
           .docs-content {
             min-width: 0;
             max-width: 100%;
+          }
+
+          .docs-section-card {
+            padding: 22px 18px !important;
+            border-radius: 14px !important;
+          }
+
+          .docs-table-wrap {
+            max-width: 100%;
+            overflow-x: auto !important;
+            -webkit-overflow-scrolling: touch;
+          }
+
+          .docs-table-wrap table {
+            min-width: 620px;
           }
         }
 

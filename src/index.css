@@ -20,6 +20,7 @@ html {
 body {
     margin: 0;
     min-width: 320px;
+    overflow-x: hidden;
 }
 
 a {
@@ -1063,6 +1064,25 @@ h2 {
 
     .header-row {
         min-height: 68px;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 48px 0 64px;
+    }
+
+    h1 {
+        font-size: clamp(2.35rem, 12vw, 3.4rem);
+        line-height: 1;
+    }
+
+    .lede {
+        font-size: .92rem;
+        line-height: 1.7;
+    }
+
+    .cta-row .button {
+        width: 100%;
     }
 
     .header-actions .primary-button {

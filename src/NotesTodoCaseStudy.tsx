@@ -25,7 +25,7 @@ import {
   Wifi,
   Zap,
 } from "lucide-react";
-import { div } from "framer-motion/client";
+
 
 export default function NotesTodoCaseStudy() {
   const [theme, setTheme] = useState<"light" | "dark">("dark");
