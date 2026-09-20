@@ -43,21 +43,21 @@ interface NavItem {
 }
 
 const NAV_ITEMS: NavItem[] = [
-  { id: "overview",      label: "Overview",            icon: <BookOpen size={14} /> },
-  { id: "why",           label: "Why NotesTodo",        icon: <Layers size={14} /> },
-  { id: "architecture",  label: "Architecture",         icon: <Cpu size={14} /> },
-  { id: "techstack",     label: "Tech Stack",           icon: <Code2 size={14} /> },
-  { id: "structure",     label: "Project Structure",    icon: <FolderOpen size={14} /> },
-  { id: "gettingstarted",label: "Getting Started",      icon: <Rocket size={14} /> },
-  { id: "configuration", label: "Configuration",        icon: <Settings size={14} /> },
-  { id: "howitworks",    label: "How It Works",         icon: <Cpu size={14} /> },
-  { id: "dbschema",      label: "Database Schema",      icon: <Database size={14} /> },
-  { id: "apireference",  label: "API Reference",        icon: <Terminal size={14} /> },
-  { id: "extending",     label: "Extending NotesTodo",  icon: <GitBranch size={14} /> },
-  { id: "testing",       label: "Testing",              icon: <FlaskConical size={14} /> },
-  { id: "roadmap",       label: "Roadmap",              icon: <Map size={14} /> },
-  { id: "contributing",  label: "Contributing",         icon: <Users size={14} /> },
-  { id: "license",       label: "License",              icon: <FileText size={14} /> },
+  { id: "overview", label: "Overview", icon: <BookOpen size={14} /> },
+  { id: "why", label: "Why NotesTodo", icon: <Layers size={14} /> },
+  { id: "architecture", label: "Architecture", icon: <Cpu size={14} /> },
+  { id: "techstack", label: "Tech Stack", icon: <Code2 size={14} /> },
+  { id: "structure", label: "Project Structure", icon: <FolderOpen size={14} /> },
+  { id: "gettingstarted", label: "Getting Started", icon: <Rocket size={14} /> },
+  { id: "configuration", label: "Configuration", icon: <Settings size={14} /> },
+  { id: "howitworks", label: "How It Works", icon: <Cpu size={14} /> },
+  { id: "dbschema", label: "Database Schema", icon: <Database size={14} /> },
+  { id: "apireference", label: "API Reference", icon: <Terminal size={14} /> },
+  { id: "extending", label: "Extending NotesTodo", icon: <GitBranch size={14} /> },
+  { id: "testing", label: "Testing", icon: <FlaskConical size={14} /> },
+  { id: "roadmap", label: "Roadmap", icon: <Map size={14} /> },
+  { id: "contributing", label: "Contributing", icon: <Users size={14} /> },
+  { id: "license", label: "License", icon: <FileText size={14} /> },
 ];
 
 /* ─── Shared UI helpers ──────────────────────────────────── */
@@ -183,25 +183,25 @@ interface ApiRoute {
 }
 
 const API_ROUTES: ApiRoute[] = [
-  { num: 1,  method: "POST",   path: "/api/auth/signup",          auth: false, description: "Register a new user" },
-  { num: 2,  method: "POST",   path: "/api/auth/Login",           auth: false, description: "Login and receive tokens" },
-  { num: 3,  method: "POST",   path: "/api/auth/forgot-password", auth: false, description: "Send OTP to email" },
-  { num: 4,  method: "POST",   path: "/api/auth/Otp",             auth: false, description: "Verify OTP" },
-  { num: 5,  method: "POST",   path: "/api/auth/resetpassword",   auth: false, description: "Reset password with OTP" },
-  { num: 6,  method: "GET",    path: "/api/categories/",          auth: false, description: "Fetch all categories" },
-  { num: 7,  method: "POST",   path: "/api/categories/",          auth: false, description: "Create a new category" },
-  { num: 8,  method: "DELETE", path: "/api/categories/:id",       auth: false, description: "Delete category + its notes" },
-  { num: 9,  method: "GET",    path: "/api/notes/all",            auth: true,  description: "Get all notes of logged-in user" },
-  { num: 10, method: "GET",    path: "/api/notes/:categoryId",    auth: false, description: "Get notes by category" },
-  { num: 11, method: "POST",   path: "/api/notes/",               auth: false, description: "Create a new note" },
-  { num: 12, method: "PUT",    path: "/api/notes/:id",            auth: false, description: "Update a note" },
-  { num: 13, method: "DELETE", path: "/api/notes/:id",            auth: false, description: "Delete a note" },
+  { num: 1, method: "POST", path: "/api/auth/signup", auth: false, description: "Register a new user" },
+  { num: 2, method: "POST", path: "/api/auth/Login", auth: false, description: "Login and receive tokens" },
+  { num: 3, method: "POST", path: "/api/auth/forgot-password", auth: false, description: "Send OTP to email" },
+  { num: 4, method: "POST", path: "/api/auth/Otp", auth: false, description: "Verify OTP" },
+  { num: 5, method: "POST", path: "/api/auth/resetpassword", auth: false, description: "Reset password with OTP" },
+  { num: 6, method: "GET", path: "/api/categories/", auth: false, description: "Fetch all categories" },
+  { num: 7, method: "POST", path: "/api/categories/", auth: false, description: "Create a new category" },
+  { num: 8, method: "DELETE", path: "/api/categories/:id", auth: false, description: "Delete category + its notes" },
+  { num: 9, method: "GET", path: "/api/notes/all", auth: true, description: "Get all notes of logged-in user" },
+  { num: 10, method: "GET", path: "/api/notes/:categoryId", auth: false, description: "Get notes by category" },
+  { num: 11, method: "POST", path: "/api/notes/", auth: false, description: "Create a new note" },
+  { num: 12, method: "PUT", path: "/api/notes/:id", auth: false, description: "Update a note" },
+  { num: 13, method: "DELETE", path: "/api/notes/:id", auth: false, description: "Delete a note" },
 ];
 
 /* ─── Main component ─────────────────────────────────────── */
 export default function DeveloperDocs() {
   const [active, setActive] = useState<SectionId>("overview");
-  const [query, setQuery]   = useState("");
+  const [query, setQuery] = useState("");
 
   const filtered = NAV_ITEMS.filter(n =>
     n.label.toLowerCase().includes(query.toLowerCase())
@@ -215,6 +215,7 @@ export default function DeveloperDocs() {
   return (
     <section
       id="developer-docs"
+      className="developer-docs-section"
       style={{
         background: "linear-gradient(180deg,#0b0d17 0%,#0d0f1b 100%)",
         padding: "92px 0 100px",
@@ -309,7 +310,7 @@ export default function DeveloperDocs() {
           </aside>
 
           {/* ── RIGHT: All 15 content sections ── */}
-          <div>
+          <div className="docs-content">
 
             {/* 01 · Overview */}
             <div id="doc-overview">
@@ -431,15 +432,15 @@ export default function DeveloperDocs() {
                 <SubHeading>Backend — /Backend</SubHeading>
                 <div className="stack-table" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10, marginTop: 6 }}>
                   {([
-                    ["express ^5.2.1",     "HTTP server and routing",                    "Server"],
-                    ["mongoose ^9.9.1",    "MongoDB ODM",                                "Data"],
-                    ["bcryptjs ^2.4.3",    "Password and OTP hashing",                   "Server"],
-                    ["jsonwebtoken ^9.0.3","JWT access & refresh tokens",                "Server"],
-                    ["nodemailer ^9.0.5",  "OTP email delivery via Gmail SMTP",          "Server"],
-                    ["cors ^2.8.6",        "Cross-origin resource sharing",              "Server"],
-                    ["dotenv ^17.4.2",     "Environment variable loading",               "Config"],
-                    ["nodemon ^3.1.14",    "Dev auto-restart (devDependency)",           "Dev"],
-                  ] as [string,string,string][]).map(([name, desc, layer]) => (
+                    ["express ^5.2.1", "HTTP server and routing", "Server"],
+                    ["mongoose ^9.9.1", "MongoDB ODM", "Data"],
+                    ["bcryptjs ^2.4.3", "Password and OTP hashing", "Server"],
+                    ["jsonwebtoken ^9.0.3", "JWT access & refresh tokens", "Server"],
+                    ["nodemailer ^9.0.5", "OTP email delivery via Gmail SMTP", "Server"],
+                    ["cors ^2.8.6", "Cross-origin resource sharing", "Server"],
+                    ["dotenv ^17.4.2", "Environment variable loading", "Config"],
+                    ["nodemon ^3.1.14", "Dev auto-restart (devDependency)", "Dev"],
+                  ] as [string, string, string][]).map(([name, desc, layer]) => (
                     <div key={name} style={{ display: "flex", alignItems: "flex-start", gap: 12, padding: "13px 14px", border: "1px solid rgba(99,102,241,.13)", borderRadius: 10, background: "rgba(255,255,255,.02)" }}>
                       <div style={{ flex: 1 }}>
                         <strong style={{ display: "block", color: "#e2e8f0", fontSize: ".8rem", marginBottom: 3, fontFamily: '"JetBrains Mono",monospace' }}>{name}</strong>
@@ -452,19 +453,19 @@ export default function DeveloperDocs() {
                 <SubHeading>Frontend — /MyAuthApp</SubHeading>
                 <div className="stack-table" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10, marginTop: 6 }}>
                   {([
-                    ["react-native 0.86.2",           "Cross-platform mobile framework",           "Client"],
-                    ["react 19.2.3",                  "UI library",                                "Client"],
-                    ["@react-navigation/native ^7",   "Navigation container",                      "Client"],
-                    ["axios ^1.19.0",                 "HTTP client with interceptors",             "Client"],
-                    ["async-storage ^3.1.1",          "Persistent local token storage",            "Client"],
-                    ["formik ^2.4.9",                 "Form state management",                     "Client"],
-                    ["react-hook-form ^7.84.0",       "Lightweight form handling",                 "Client"],
-                    ["yup ^1.7.1",                    "Schema-based form validation",              "Client"],
-                    ["lucide-react-native ^1.39.0",   "Lucide icon set for React Native",          "Client"],
-                    ["rn-linear-gradient ^2.8.3",     "Gradient UI elements",                      "Client"],
-                    ["react-native-svg ^15.15.5",     "SVG asset support",                         "Client"],
-                    ["typescript ^5.8.3",             "Static typing (devDependency)",             "Dev"],
-                  ] as [string,string,string][]).map(([name, desc, layer]) => (
+                    ["react-native 0.86.2", "Cross-platform mobile framework", "Client"],
+                    ["react 19.2.3", "UI library", "Client"],
+                    ["@react-navigation/native ^7", "Navigation container", "Client"],
+                    ["axios ^1.19.0", "HTTP client with interceptors", "Client"],
+                    ["async-storage ^3.1.1", "Persistent local token storage", "Client"],
+                    ["formik ^2.4.9", "Form state management", "Client"],
+                    ["react-hook-form ^7.84.0", "Lightweight form handling", "Client"],
+                    ["yup ^1.7.1", "Schema-based form validation", "Client"],
+                    ["lucide-react-native ^1.39.0", "Lucide icon set for React Native", "Client"],
+                    ["rn-linear-gradient ^2.8.3", "Gradient UI elements", "Client"],
+                    ["react-native-svg ^15.15.5", "SVG asset support", "Client"],
+                    ["typescript ^5.8.3", "Static typing (devDependency)", "Dev"],
+                  ] as [string, string, string][]).map(([name, desc, layer]) => (
                     <div key={name} style={{ display: "flex", alignItems: "flex-start", gap: 12, padding: "13px 14px", border: "1px solid rgba(99,102,241,.13)", borderRadius: 10, background: "rgba(255,255,255,.02)" }}>
                       <div style={{ flex: 1 }}>
                         <strong style={{ display: "block", color: "#e2e8f0", fontSize: ".8rem", marginBottom: 3, fontFamily: '"JetBrains Mono",monospace' }}>{name}</strong>
@@ -632,12 +633,12 @@ EMAIL_APP_PASSWORD=<your_gmail_app_password>`}</CodeBlock>
                     </thead>
                     <tbody>
                       {[
-                        ["PORT",                    "Port the Express server listens on (default: 5000)"],
-                        ["MONGO_URI",               "MongoDB Atlas connection string"],
-                        ["ACCESS_TOKEN_SECRET",     "Signs JWT access tokens — expires in 15 minutes"],
-                        ["REFRESH_TOKEN_SECRET",    "Signs JWT refresh tokens — expires in 7 days"],
-                        ["EMAIL_USER",              "Gmail address used to send OTP emails"],
-                        ["EMAIL_APP_PASSWORD",      "Gmail App Password — not your regular Google account password"],
+                        ["PORT", "Port the Express server listens on (default: 5000)"],
+                        ["MONGO_URI", "MongoDB Atlas connection string"],
+                        ["ACCESS_TOKEN_SECRET", "Signs JWT access tokens — expires in 15 minutes"],
+                        ["REFRESH_TOKEN_SECRET", "Signs JWT refresh tokens — expires in 7 days"],
+                        ["EMAIL_USER", "Gmail address used to send OTP emails"],
+                        ["EMAIL_APP_PASSWORD", "Gmail App Password — not your regular Google account password"],
                       ].map(([v, d], i, arr) => (
                         <tr key={v} style={{ borderBottom: i < arr.length - 1 ? "1px solid rgba(99,102,241,.08)" : "none" }}>
                           <td style={{ padding: "10px 14px", fontFamily: "monospace", color: "#a5b4fc", fontSize: ".75rem", whiteSpace: "nowrap" }}>{v}</td>
@@ -977,15 +978,15 @@ npx jest --coverage`}</CodeBlock>
                 <div style={{ display: "grid", gap: 10, marginTop: 6 }}>
                   {([
                     ["Refresh token endpoint — renew expired access tokens without re-login", "Planned"],
-                    ["Search notes by title or description",                                   "Planned"],
-                    ["Note pinning / favourites",                                              "Planned"],
-                    ["Offline support — queue creates/updates, sync when back online",         "Planned"],
-                    ["Push notifications for todo reminders",                                  "Planned"],
-                    ["Google / social login (component shell already exists)",                 "Planned"],
-                    ["Note sharing between users",                                             "Planned"],
-                    ["Dark mode",                                                              "Planned"],
-                    ["Unit and integration test coverage for backend controllers",             "In progress"],
-                    ["CI/CD pipeline (GitHub Actions)",                                        "In progress"],
+                    ["Search notes by title or description", "Planned"],
+                    ["Note pinning / favourites", "Planned"],
+                    ["Offline support — queue creates/updates, sync when back online", "Planned"],
+                    ["Push notifications for todo reminders", "Planned"],
+                    ["Google / social login (component shell already exists)", "Planned"],
+                    ["Note sharing between users", "Planned"],
+                    ["Dark mode", "Planned"],
+                    ["Unit and integration test coverage for backend controllers", "In progress"],
+                    ["CI/CD pipeline (GitHub Actions)", "In progress"],
                   ] as [string, string][]).map(([label, status]) => {
                     const color = status === "In progress" ? "#fde047" : "#71717a";
                     return (
@@ -1086,10 +1087,42 @@ OF THIS SOFTWARE.`}</CodeBlock>
       </div>{/* end container */}
 
       <style>{`
-        @media (max-width: 900px) {
-          .docs-layout { grid-template-columns: 1fr !important; }
-          .docs-layout > aside { position: static !important; }
+        .docs-layout > aside {
+          min-width: 0;
         }
+
+        .docs-content {
+          min-width: 0;
+          width: 100%;
+        }
+
+        @media (max-width: 767px) {
+          .developer-docs-section {
+            overflow-x: hidden;
+          }
+
+          .developer-docs-section > .container {
+            width: 100%;
+            max-width: 100%;
+            padding-inline: 16px;
+          }
+
+          .docs-layout {
+            width: 100%;
+            grid-template-columns: minmax(0, 1fr) !important;
+            gap: 0 !important;
+          }
+
+          .docs-layout > aside {
+            display: none !important;
+          }
+
+          .docs-content {
+            min-width: 0;
+            max-width: 100%;
+          }
+        }
+
         @media (max-width: 620px) {
           .arch-grid  { grid-template-columns: 1fr !important; }
           .stack-table { grid-template-columns: 1fr !important; }

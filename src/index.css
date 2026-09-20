@@ -50,6 +50,10 @@ svg {
     transition: background .3s ease, color .3s ease;
 }
 
+.main-shell {
+    overflow-x: hidden;
+}
+
 .notes-app.theme-dark {
     --bg: #0b0b12;
     --surface: #1a1a22;
