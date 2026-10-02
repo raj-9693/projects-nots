@@ -3,8 +3,6 @@ import DeveloperDocs from "./DeveloperDocs";
 import {
   ArrowRight,
   ArrowUpRight,
-  BatteryFull,
-  Check,
   CheckSquare,
   CircleAlert,
   Cloud,
@@ -17,12 +15,10 @@ import {
   MonitorCloud,
   MoonStar,
   NotebookPen,
-  Plus,
   RefreshCw,
   ShieldCheck,
   Smartphone,
   SunMedium,
-  Wifi,
   Zap,
 } from "lucide-react";
 
@@ -100,55 +96,28 @@ export default function NotesTodoCaseStudy() {
           </div>
           <div className="phone-wrap">
             <div className="phone-glow" />
-            <div className="phone-shell">
-              <div className="phone-header">
-                <span>9:41</span>
-                <span className="status-icons">
-                  <Wifi size={12} />
-                  <BatteryFull size={12} />
-                </span>
+            <div className="phone-showcase" aria-label="NotesTodo app screens">
+              <div className="showcase-phone showcase-phone-left">
+                <div className="phone-float">
+                  <div className="showcase-phone-frame">
+                    <img className="showcase-phone-screen" src="/home.jpg" alt="NotesTodo home screen" />
+                    <span className="phone-island" aria-hidden="true" />
+                  </div>
+                </div>
               </div>
-              <div className="phone-screen">
-                <div className="screen-topbar">
-                  <div>
-                    <p>Tuesday, October 25</p>
-                    <h2>Good morning.</h2>
-                  </div>
-                  <span className="plus-button" aria-label="Add task">
-                    <Plus size={16} />
-                  </span>
-                </div>
-                <div className="focus-card">
-                  <span className="focus-indicator" aria-hidden="true" />
-                  <div>
-                    <p className="focus-title">Ship NotesTodo case study</p>
-                    <p className="focus-meta">Today · 2:00 PM</p>
+              <div className="showcase-phone showcase-phone-center">
+                <div className="phone-float">
+                  <div className="showcase-phone-frame">
+                    <img className="showcase-phone-screen" src="/process.jpg" alt="NotesTodo task screen" />
+                    <span className="phone-island" aria-hidden="true" />
                   </div>
                 </div>
-                <div className="focus-summary">
-                  <span>Today&apos;s focus</span>
-                  <span>2 of 4</span>
-                </div>
-                <div className="task-list">
-                  <div className="task-row">
-                    <span className="task-dot" aria-hidden="true" />
-                    <span>Review API edge cases</span>
-                  </div>
-                  <div className="task-row done">
-                    <span className="task-complete">
-                      <Check size={10} />
-                    </span>
-                    <span>Write onboarding notes</span>
-                  </div>
-                </div>
-                <div className="mini-cards">
-                  <div className="mini-card">
-                    <NotebookPen size={18} />
-                    <p>12 notes</p>
-                  </div>
-                  <div className="mini-card">
-                    <CheckSquare size={18} />
-                    <p>8 tasks</p>
+              </div>
+              <div className="showcase-phone showcase-phone-right">
+                <div className="phone-float">
+                  <div className="showcase-phone-frame">
+                    <img className="showcase-phone-screen" src="/creatNots.jpg" alt="NotesTodo notes screen" />
+                    <span className="phone-island" aria-hidden="true" />
                   </div>
                 </div>
               </div>
@@ -372,6 +341,34 @@ export default function NotesTodoCaseStudy() {
                 <img src="/login.jpg" alt="NotesTodo account login preview" />
                 <figcaption>Recreat-passwords</figcaption>
               </figure>
+
+              <figure className="demo-shot">
+                <img src="/home.jpg" alt="NotesTodo account login preview" />
+                <figcaption>Home</figcaption>
+              </figure>
+
+              <figure className="demo-shot">
+                <img src="/creatNots.jpg" alt="NotesTodo account login preview" />
+                <figcaption>creatNots</figcaption>
+              </figure>
+
+              <figure className="demo-shot">
+                <img src="/AllNots.jpg" alt="NotesTodo account login preview" />
+                <figcaption>AllNots</figcaption>
+              </figure>
+
+              <figure className="demo-shot">
+                <img src="/process.jpg" alt="NotesTodo account login preview" />
+                <figcaption>Progress</figcaption>
+              </figure>
+
+              <figure className="demo-shot">
+                <img src="/setting.jpg" alt="NotesTodo account login preview" />
+                <figcaption>setting</figcaption>
+              </figure>
+
+
+
               <div className="demo-video-card" id="demo-video">
                 <video controls preload="metadata" poster="/recreat.jpg">
                   <source src="/Screen.mp4" type="video/mp4" />
